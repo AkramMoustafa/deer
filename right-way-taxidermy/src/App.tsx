@@ -219,7 +219,7 @@ export default function Home() {
               className="max-w-4xl"
             >
               <p className="uppercase tracking-[3px] md:tracking-[8px] text-gray-300 text-xs md:text-sm mb-5 md:mb-6">
-                Museum Quality Craftsmanship
+                Professional Craftsmanship
               </p>
 
               <h1 className="text-white text-4xl sm:text-5xl md:text-8xl font-black leading-[0.95] mb-6 md:mb-8">
@@ -268,7 +268,7 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-500 text-base md:text-lg leading-relaxed">
-              Built with museum-level craftsmanship and realism.
+              Built with exceptional craftsmanship and realism.
             </p>
           </div>
 
