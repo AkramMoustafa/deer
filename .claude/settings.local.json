@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem C:\\\\deer\\\\right-way-taxidermy -Recurse -File | Where-Object { $_.Extension -in '.tsx','.ts','.css','.html','.jsx','.js' } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem C:\\\\deer\\\\right-way-taxidermy -File | Select-Object Name; Get-ChildItem C:\\\\deer\\\\right-way-taxidermy -Directory | Where-Object { $_.Name -ne 'node_modules' } | Select-Object Name)"
+    ]
+  }
+}
