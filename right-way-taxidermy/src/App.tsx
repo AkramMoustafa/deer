@@ -209,7 +209,7 @@ export default function Home() {
         </nav>
 
         {/* HERO CONTENT */}
-        <div className="relative z-10 min-h-[100svh] flex items-end md:items-center pb-20 md:pb-0">
+        <div className="relative z-10 min-h-[100svh] flex items-center pt-32 md:pt-52">
           <div className="max-w-7xl mx-auto px-4 md:px-6 w-full">
 
             <motion.div
@@ -275,29 +275,29 @@ export default function Home() {
           {/* ROW */}
           {[
             {
-              img: "/images/deer1.jpg",
-              title: "Deer Mounts",
-              label: "Whitetail Collection",
-              heading: "Precision In Every Detail",
-              body:
-                "Every form, eye set, and habitat detail is crafted to recreate the exact moment from the field.",
-            },
-            {
-              img: "/images/duck.jpg",
-              title: "Dynamic Displays",
-              label: "Waterfowl",
-              heading: "Motion Frozen In Time",
-              body:
-                "Every feather alignment and wing position creates movement and realism.",
-            },
-            {
-              img: "/images/elk.jpg",
-              title: "Built To Last",
-              label: "Big Game",
-              heading: "Crafted To Command",
-              body:
-                "Large-scale mounts combine anatomy, artistry, and craftsmanship.",
-            },
+  img: "/images/deer1.jpg",
+  title: "Whitetail Mounts",
+  label: "Signature Collection",
+  heading: "Preserved With Precision",
+  body:
+    "Custom whitetail mounts crafted to capture the character, detail, and memory behind every trophy.",
+},
+{
+  img: "/images/elk.jpg",
+  title: "Big Game Preservation",
+  label: "Western Trophy",
+  heading: "Built For Generations",
+  body:
+    "Large-scale trophy preservation built with realism, craftsmanship, and attention to every detail of the hunt.",
+},
+{
+  img: "/images/duck.png",
+  title: "European Mounts",
+  label: "Skull Preservation",
+  heading: "Cleaned To Perfection",
+  body:
+    "Professionally cleaned skull mounts designed to preserve natural texture, structure, and detail for generations.",
+},
           ].map((item, index) => (
             <div
               key={index}
@@ -418,25 +418,25 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-10">
 
             {[
-              {
-                number: "01",
-                title: "Preparation",
-                body:
-                  "Every specimen is carefully preserved and evaluated.",
-              },
-              {
-                number: "02",
-                title: "Sculpting",
-                body:
-                  "Custom shaping and positioning create realistic movement.",
-              },
-              {
-                number: "03",
-                title: "Finishing",
-                body:
-                  "Final detailing creates mounts built for generations.",
-              },
-            ].map((step, index) => (
+  {
+    number: "01",
+    title: "Preparation",
+    body:
+      "Every specimen is carefully cleaned, preserved, and prepared for long-lasting detail.",
+  },
+  {
+    number: "02",
+    title: "Mounting",
+    body:
+      "Careful positioning and craftsmanship bring natural posture and realism to every piece.",
+  },
+  {
+    number: "03",
+    title: "Finishing",
+    body:
+      "Final detailing and texturing complete each mount with lasting quality and realism.",
+  },
+].map((step, index) => (
               <div
                 key={index}
                 className="border border-white/10 p-6 md:p-8"
