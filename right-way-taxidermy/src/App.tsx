@@ -55,7 +55,17 @@ export default function Home() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 120, opacity: 0 }}
             transition={{ duration: 0.45 }}
-            className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[999] w-[94vw] max-w-xl"
+            className="
+fixed
+bottom-3
+left-3
+right-3
+md:left-1/2
+md:right-auto
+md:-translate-x-1/2
+z-[999]
+md:w-[520px]
+"
           >
             <div className="bg-[#0f0f0f] text-white rounded-2xl px-5 py-5 md:px-7 md:py-6 shadow-2xl border border-white/10 flex flex-col gap-5">
               <div>
@@ -396,11 +406,11 @@ export default function Home() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-white text-black">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
 
           <div className="mb-14 md:mb-16 text-center max-w-2xl mx-auto">
-            <p className="uppercase tracking-[4px] md:tracking-[6px] text-gray-500 text-[10px] mb-4">
+            <p className="uppercase tracking-[4px] md:tracking-[6px] text-gray-400 text-[10px] mb-4">
               The Process
             </p>
 
@@ -410,7 +420,7 @@ export default function Home() {
               Precision
             </h2>
 
-            <p className="text-gray-400 text-base leading-relaxed">
+            <p className="text-gray-600 text-base leading-relaxed">
               Every mount moves through a handcrafted process focused on realism.
             </p>
           </div>
