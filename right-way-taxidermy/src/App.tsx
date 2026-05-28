@@ -12,18 +12,12 @@ import {
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6"
 
 export default function Home() {
-  const [cookiesAccepted, setCookiesAccepted] =
-    useState<boolean | null>(null)
+
 
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenu, setMobileMenu] = useState(false)
 
   useEffect(() => {
-    const stored = localStorage.getItem("rw-cookies")
-
-    if (stored) {
-      setCookiesAccepted(stored === "accepted")
-    }
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 40)
@@ -34,71 +28,11 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const acceptCookies = () => {
-    localStorage.setItem("rw-cookies", "accepted")
-    setCookiesAccepted(true)
-  }
 
-  const declineCookies = () => {
-    localStorage.setItem("rw-cookies", "declined")
-    setCookiesAccepted(false)
-  }
 
   return (
     <div className="bg-white text-black overflow-hidden">
 
-      {/* COOKIES */}
-      <AnimatePresence>
-        {cookiesAccepted === null && (
-          <motion.div
-            initial={{ y: 120, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 120, opacity: 0 }}
-            transition={{ duration: 0.45 }}
-            className="
-fixed
-bottom-3
-left-3
-right-3
-md:left-1/2
-md:right-auto
-md:-translate-x-1/2
-z-[999]
-md:w-[520px]
-"
-          >
-            <div className="bg-[#0f0f0f] text-white rounded-2xl px-5 py-5 md:px-7 md:py-6 shadow-2xl border border-white/10 flex flex-col gap-5">
-              <div>
-                <p className="font-semibold text-sm md:text-base mb-2 tracking-wide">
-                  We Use Cookies
-                </p>
-
-                <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                  We use cookies to improve your experience,
-                  analyze traffic, and personalize content.
-                </p>
-              </div>
-
-              <div className="flex gap-3">
-                <button
-                  onClick={declineCookies}
-                  className="flex-1 px-4 py-3 rounded-full border border-white/20 text-sm text-gray-400"
-                >
-                  Decline
-                </button>
-
-                <button
-                  onClick={acceptCookies}
-                  className="flex-1 px-4 py-3 rounded-full bg-white text-black text-sm font-semibold flex items-center justify-center gap-2"
-                >
-                  <CheckCircle size={15} />
-                  Accept
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* HERO */}
       <section
